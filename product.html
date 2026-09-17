@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+
+    <style>
+
+        .header{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .header .cart{
+            color:rgb(11, 11, 231);
+            margin:7px 3px 1px 15px;
+            
+
+        }
+        .header .box .box-in h4{
+            margin: 11px 3px 1px 100px;
+        }
+        
+
+        .header .all select{
+            margin: 14px 3px 1px 300px;
+            padding: 5px;
+            border-radius: 15px;
+
+        }
+        .header .by select{
+            margin: 14px 2px 1px 20px;
+            padding: 5px;
+            border-radius: 15px;
+            
+        }
+        .header .search-box input{
+            margin:14px 2px 1px 20px ;
+            padding: 5px;
+            border-radius: 15px;
+            border-color: none;
+        }
+
+    
+    
+        
+        
+         
+
+
+
+
+
+        *{
+            margin:0;
+            padding:0;
+        }
+        .product:hover{
+            background-color: rgb(57, 56, 56);
+            transition: all 1.5s;
+            
+            box-shadow: 1px 15px 12px 1px rgb(57, 56, 56)
+        }
+        .main-box{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .main-box .product{
+            background-color: white;
+            border: 1px solid gray;
+            text-align: center;
+            width: 27%;
+            margin: 20px;
+            border-radius: 10px;
+
+
+
+        }
+        .main-box .product .bg{
+            background-color: white;
+            border-radius: 10px;
+        }
+        .main-box .product .bg .bg-in{
+            display: flex;
+            justify-content: space-between;
+            width:90% ;
+            margin: auto;
+            padding: 10px;
+
+
+        }
+        .bg .bg-in h4{
+            background-color:rgb(167, 39, 107) ;
+            color:white;
+            border-radius:10px ;
+            padding: 5px 10px;
+            font-size: 12px;
+        }
+        .main-box .bg .bg-in i {
+            background-color: white;
+            color: black;
+            padding: 8px;
+            border-radius: 50%;
+        }
+        .main-box .product img{
+            height: 100px;
+            width:100px;
+            border-radius: 10px;
+        }
+         .product-in{
+            display: flex;
+            justify-content: space-between;
+        
+            flex-wrap: wrap;
+            
+            
+        }
+        .product-in .ret h4{
+            
+            color: rgb(39, 39, 223);
+            
+        }
+        .batn button{
+            background-color: aquamarine;
+            color: white;
+            
+            width: 100%;
+            border-radius:10px ;
+            margin: 1px 1px 5px 1px;
+
+        }
+        .batn i{
+            color: goldenrod;
+            justify-content:left;
+            
+        }
+        .cart-section{
+            display: flex;
+            justify-content: space-between;
+            margin: 10px;
+        }
+
+        .cart-section .icons i{
+            background-color: rgb(190, 190, 238);
+            color: blue;
+            padding: 7px;
+            border-radius: 50%;
+            font-size: 12px;
+        }
+
+        .cart-section .cart-btn button{
+            background-color: rgb(49, 49, 215);
+            color: white;
+            padding: 6px 15px;
+            border: none;
+            border-radius: 7px;
+            font-size: 12px;
+        }
+
+        .cart-btn button span{
+            margin-right: 6px;
+        }
+
+
+        .goles{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .goles .left  i{
+            background-color: white;
+            color: black;
+            padding: 8px;
+            border-radius: 50%;
+            border-color:rgb(214, 173, 173) ;
+            margin: 15px 12px;
+        }
+         
+
+       .goles .num h2{
+        background-color: rgb(44, 44, 176);
+        color: black;
+        padding: 6px;
+        border-radius: 50%;
+        margin: 10px 5px;
+       } 
+       .goles .num2 h2{
+        background-color: white;
+        color: black;
+        padding: 8px;
+        border-radius: 50%;
+                    border-color:rgb(214, 173, 173) ;
+                     margin: 10px 5px;
+
+
+       }
+
+       .goles .right  i{
+            background-color: white;
+            color: black;
+            padding: 8px;
+            border-radius: 50%;
+                        border-color:rgb(160, 74, 74) ;
+                        margin: 15px 12px;
+
+        }
+
+        .stardiv{
+            margin-left: -120px;
+        }
+    
+    </style>
+
+
+
+     <div class="header">
+        <div class="cart">
+            <h1>product cards desgin</h1>
+          </div>
+        
+
+          
+          
+        <div class="all">
+            <select class="categroy">
+                <option>all categroy</option>
+
+            </select>
+            
+
+        </div>
+        <div class="by">
+            <select class="short">
+                <option>short by</option>
+
+            </select>
+
+        </div>
+        <div class="search-box">
+            
+            <input type="text" placeholder="search product ">
+
+        </div>
+
+         
+     </div>
+
+      
+        
+
+    
+
+
+    
+
+
+
+
+
+
+    <div class="main-box">
+        <div class="product">
+            <div class="bg">
+                <div class="bg-in">
+                    <h4>new</h4>
+                    <i class="fas fa-heart"></i>
+
+
+                </div>
+                <img src="./headphones-png-20172.png">
+
+            </div>
+            <div class="product-in">
+            <div class="detail">
+                <h3><small>Wireless Bluetooth Headphone</small></h3>
+            
+            </div>
+            <div class="ret">
+                <h4>$89.45</h4>
+
+            </div>
+
+             
+        </div>
+        <div class="batn">
+            <button>Electionics</button>
+            <p><small>High-quality Wireless Bluetooth headphone with nosie cancallection and 30-houre battry</small></p><br/>
+           
+           <div class="stardiv"> <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>(128)</div>
+            <br/>
+
+            
+
+        </div>
+         <div class="cart-section">
+                <div class="icons">
+                    <i class="fas fa-eye"></i>
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="cart-btn">
+                    <button><span><i class="fas fa-shopping-cart"></i></span>Add to cart</button>
+        
+
+        </div>
+
+    </div>
+    </div>
+
+     <div class="product">
+            <div class="bg">
+                <div class="bg-in">
+                    <h4>new</h4>
+                    <i class="fas fa-heart"></i>
+
+
+                </div>
+                <img style="height: 100px; width:100% ; " style="background-color: white;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIW7xxxrc4B-WI_T9Yzlj6-iPQ6fLTodMzsyJFiwNyuw&s=10">
+
+            </div>
+            <div class="product-in">
+            <div class="detail">
+                <h3><small>Smart Fitness Tracker</small></h3>
+            
+            </div>
+            <div class="ret">
+                <h4>$59.99</h4>
+
+            </div>
+
+             
+        </div>
+        <div class="batn">
+            <button>Electionics</button>
+            <p><small>Track your steps,heart rate.sleep patterns and more with this sleek fitness band.</small></p><br/>
+            
+             <div class="stardiv"> <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>(128)</div>
+            <br/>
+
+            
+
+        </div>
+         <div class="cart-section">
+                <div class="icons">
+                    <i class="fas fa-eye"></i>
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="cart-btn">
+                    <button><span><i class="fas fa-shopping-cart"></i></span>Add to cart</button>
+        
+
+        </div>
+        </div>
+
+    </div>
+
+     <div class="product">
+            <div class="bg">
+                <div class="bg-in">
+                    <h4>new</h4>
+                    <i class="fas fa-heart"></i>
+
+
+                </div>
+                <img style="width: 100%;"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcyLlEljIZ4xNMF8gcxSczK4n9vm3LQGLakNiuG8i7mg&s=10">
+
+            </div>
+            <div class="product-in">
+            <div class="detail">
+                <h3><small>Oraganic Cotton T-Shirt</small></h3>
+            
+            </div>
+            <div class="ret">
+                <h4>$24.99</h4>
+
+            </div>
+
+             
+        </div>
+        <div class="batn">
+            <button>Clothing</button>
+            <p><small>Complete skincase routine with clearner,toner,and moisturizer for all skin types</small></p><br/>
+            <div class="stardiv"> <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>(128)</div>
+           
+            <br/>
+
+            
+
+        </div>
+         <div class="cart-section">
+                <div class="icons">
+                    <i class="fas fa-eye"></i>
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="cart-btn">
+                    <button><span><i class="fas fa-shopping-cart"></i></span>Add to cart</button>
+        
+
+        </div>
+        </div>
+
+    </div>
+
+     <div class="product">
+            <div class="bg">
+                <div class="bg-in">
+                    <h4>new</h4>
+                    <i class="fas fa-heart"></i>
+
+
+                </div>
+                 <img style="width: ;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSk95x5e5dapK0J9QB6WUh8U3nsrqf9sTFjZ2idZDonYg&s=10">
+
+            </div>
+            <div class="product-in">
+            <div class="detail">
+                <h3><small>Stainless steel water bottle</small></h3>
+                </div>
+           
+            <div class="ret">
+                <h4>$19.99</h4>
+
+            </div>
+
+             
+        </div>
+        <div class="batn">
+            <button>Home</button>
+            <p><small>keep your drinks hot o cold for hours with this durable stainless steel bottle</small></p><br/>
+            <div class="stardiv"> <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>(128)</div>
+           
+            <br/>
+
+            
+
+        </div>
+         <div class="cart-section">
+                <div class="icons">
+                    <i class="fas fa-eye"></i>
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="cart-btn">
+                    <button><span><i class="fas fa-shopping-cart"></i></span>Add to cart</button>
+        
+
+        </div>
+        </div>
+
+    </div>
+
+     <div class="product">
+            <div class="bg">
+                <div class="bg-in">
+                    <h4>new</h4>
+                    <i class="fas fa-heart"></i>
+
+
+                </div>
+                <img style="width: 100%;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdfJeko-OycGIzheizoz2KuOEe7zFZiSwr_c9rDwLUFQ&s=10">
+
+            </div>
+            <div class="product-in">
+            <div class="detail">
+                <h3><small>Wireless Charging Pad</small></h3>
+            
+            </div>
+            <div class="ret">
+                <h4>$29.99</h4>
+
+            </div>
+
+             
+        </div>
+        <div class="batn">
+            <button>Electionics</button>
+            <p><small> Charge your Qi-enabled devies quickly and convenienty without cables</small></p><br/>
+             <div class="stardiv"> <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>(128)</div>
+            
+            <br/>
+
+            
+
+        </div>
+         <div class="cart-section">
+                <div class="icons">
+                    <i class="fas fa-eye"></i>
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="cart-btn">
+                    <button><span><i class="fas fa-shopping-cart"></i></span>Add to cart</button>
+        
+
+        </div>
+        </div>
+
+    </div>
+
+     <div class="product">
+            <div class="bg">
+                <div class="bg-in">
+                    <h4>new</h4>
+                    <i class="fas fa-heart"></i>
+
+
+                </div>
+                <img style="width: 100%;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpkTyp1WIm3pOYcUeSQbwdZR1Wy6ZYoMvzX1rdl8aMnw&s=10">
+
+            </div>
+            <div class="product-in">
+            <div class="detail">
+                <h3><small>Premium Skincare Set</small></h3>
+            
+            </div>
+            <div class="ret">
+                <h4>$79.99</h4>
+
+            </div>
+
+             
+        </div>
+        <div class="batn">
+            <button>Beautly</button>
+            <p><small>Complte skincare routine with clearner ,toner ,and moisturizer for all skin types</small></p><br/>
+             <div class="stardiv"> <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>(128)</div>
+            
+            <br/>
+
+            
+
+        </div>
+         <div class="cart-section">
+                <div class="icons">
+                    <i class="fas fa-eye"></i>
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="cart-btn">
+                    <button><span><i class="fas fa-shopping-cart"></i></span>Add to cart</button>
+        
+
+        </div>
+
+    </div>
+
+    </div>
+
+    
+
+
+
+    </div>
+
+    <div class="goles">
+        <div class="left">
+            <span><i class="fas fa-chevron-left"></i></span>
+
+        </div>
+        <div class="num">
+            <h2>1</h2>
+
+        </div>
+        <div class="num2">
+            <h2>2</h2>
+
+        </div>
+        <div class="right">
+            <span><i class="fas fa-angle-right"></i></span>
+        </div>
+
+
+    </div>
+
+
+    
+    
+    
+</body>
+</html>
+
+
+
+        
